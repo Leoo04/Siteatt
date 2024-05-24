@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS Tenis e calçados</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: rgb(184, 159, 20);
+        }
+        th, td {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #000000;
+        }
+        h2{
+            text-align: center;
+            padding: 8px;
+            color:rgb(202, 187, 51);
+        }
+        div{
+            text-align: center;
+        }
+        .logo{
+            width: 10%;
+            height: 200px;
+        }
+        body{
+            background-color: rgb(21, 18, 18);
+        }
+        label{
+            color:white;
+        }
+        .fadeOut{
+            opacity: 0;
+            transition: 1s;
+        }
+        #filtrar-tabela{
+            width: 19.5%;
+            height: 35px;
+            margin-bottom: 10px;
+        }
+        .invisivel{
+            display: none;
+        }
+        .grupo{
+            margin-bottom: 20px;
+        }
+        .campo-medio {
+            width: calc(10% - 5px);
+        }
+        title{
+            text-align: center;
+            padding: 8px;
+            color:rgb(202, 187, 51);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" class="logo">
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h2 class="titulo">Encomendas</h2>
+            <label for="filtrar-tabela">Filtrar:</label>
+            <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do cliente">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor Unitário</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-clientes">
+            <tr class="cliente">
+                <td class="info-nome">Yasmin</td>
+                <td class="info-produto">Vans preto</td>
+                <td class="info-qtde">1</td>
+                <td class="info-valor">469</td>
+                <td class="info-total"></td>
+            </tr>
+            <tr class="cliente">
+                <td class="info-nome">Thales</td>
+                <td class="info-produto">Chuteira Nike - lunar gato</td>
+                <td class="info-qtde">L</td>
+                <td class="info-valor">429</td>
+                <td class="info-total"></td>
+            </tr>
+            <tr class="cliente">
+                <td class="info-nome">Edinaldo</td>
+                <td class="info-produto">Mizuno prophecy 12</td>
+                <td class="info-qtde">1</td>
+                <td class="info-valor">1139</td>
+                <td class="info-total"></td>
+            </tr>
+            <tr class="cliente">
+                <td class="info-nome">Pedro</td>
+                <td class="info-produto">Tenis nike Tn - azul</td>
+                <td class="info-qtde">1</td>
+                <td class="info-valor">1200</td>
+                <td class="info-total"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="buscar_encomendas" class="botao">Buscar Encomendas</button>
+
+				<!--Formulário de inclusão de encomendas -->
+				<h2 id="titulo-form">Adicionar nova encomenda</h2>
+				<!--Exibe os erros de validação do formulário-->
+				<ul id="mensagens-erro"></ul>
+				<form id="form-adiciona">
+					<div class="grupo">
+						<label for="nome">Nome:</label>
+						<input type="text" id="nome" name="nome" placeholder="Digite o nome do(a) cliente" class="campo" required>
+					</div>
+					<div class="grupo">
+						<label for="qtde">Qtde:</label>
+						<input type="number" id="qtde" name="qtde" placeholder="Digite a quantidade encomendada" class="campo campo-medio" required>
+					</div>
+					<div class="grupo">
+						<label for="produto">Produto:</label>
+						<select id="produto" name="produto" class="campo campo-medio">
+						<option value="">Selecione</option>
+						<option>Vans - preto</option>
+						<option>Vans - branco</option>
+						<option>Chuteira Nike - lunar gato vermelha</option>
+						<option>Chuteira Nike - lunar gato preta</option>
+						<option>Chuteira Nike - lunar gato branca</option>
+						<option>Chuteira Nike - lunar gato azul</option>
+						<option>Mizuno prophecy 12 - branco</option>
+						<option>Mizuno prophecy 12 - preto</option>
+						<option>Mizuno prophecy 12 - vermelho</option>
+						<option>Tenis nike Tn - azul</option>
+						<option>Tenis nike Tn - preto</option>
+						<option>Tenis nike Tn - branco</option>
+						</select>
+					</div>
+					<div class="grupo">
+						<label for="unitario">R$ Unitário:</label>
+						<input type="number" id="unitario" name="unitario" placeholder="Digite o valor unitário do produto" class="campo campo-medio" required>
+					</div>
+					<!-- <button id="adicionar-encomenda" class="botao bto-principal">Adicionar</button> -->
+					<input type="submit" id="adicionar-encomenda" class="botao bto-principal">
+				</form>
+			</section>
+		</main>
+		<script src="js/calcula-total.js"></script>
+		<script src="js/form.js"></script>
+		<script src="js/remover-encomenda.js"></script>
+        <script src="js/buscar_encomendas.js"></script>
+	</body>
+</html>
