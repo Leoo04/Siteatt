@@ -1,0 +1,32 @@
+{
+    "encomendas_web": [
+        {
+            "nome": "Palmira",
+            "produto": "Mizuno prophecy 12 preto",
+            "quantidade": 1,
+            "unitario": 1139,
+            "total": 0
+        },
+        {
+            "nome": "Marcio",
+            "produto": "Vans preto",
+            "quantidade": 2,
+            "unitario": 469,
+            "total": 0
+        },
+        {
+            "nome": "João",
+            "produto": "Chuteira Nike lunar gato branca",
+            "quantidade": 1,
+            "unitario": 429,
+            "total": 0
+        },
+        {
+            "nome": "Maria",
+            "produto": "Vans branco",
+            "quantidade": 1,
+            "unitario": 1200,
+            "total": 0
+        }
+    ]
+}
